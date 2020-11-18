@@ -1,0 +1,420 @@
+<html>
+<head>
+	<title>
+		TEST
+	</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<style>
+
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 500px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+
+
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+<body>
+<button class="open-button" onclick="openForm()">Feedback</button>
+
+
+
+
+
+
+
+<div class="container">
+  <h2>Jobs and Vacancies</h2>  
+  <input class="form-control" id="myInput" type="text" placeholder="eg.Programmer"> <input class="form-control" id="myInput" type="text" placeholder="eg.Mumbai"><strong> <button type="button">Findjobs</button>
+  <br>
+<br><br>
+</div>
+
+
+
+
+
+
+
+
+<div class='job-filter-title'>Date Posted</div>
+<div class='job-filter-content'>
+	<ul class='field'>
+	
+		<input type="radio" name="posted" id="posted_1" value="1" />
+		<label for='posted_1'>24 hours</label><br>
+	
+	
+		<input type="radio" name="posted" id="posted_3" value="3" />
+		<label for='posted_3'>3 days</label><br>
+	
+		<input type="radio" name="posted" id="posted_7" value="7" />
+		<label for='posted_7'>7 days</label><br>
+
+		<input type="radio" name="posted" id="posted_30" value="30" checked="checked" />
+		<label for='posted_30'>30 days</label><br><br>
+</div>
+
+
+
+
+<div class='job-filter-title'>Job Type</div><br><ul>
+<input type="checkbox" name="front_emp" id="emp_all" value="" checked="checked" />
+<label for='emp_all'>All</label>
+<br>
+<input type="checkbox" name="front_emp" id="emp_jtft" value="jtft" />
+Full-Time Employee
+<span>(116)</span>
+</label>
+</br>
+</ul><br>
+
+
+
+
+
+
+<div class='job-filter-title'>Categories</div>
+<div class='job-filter-content'>
+<ul>
+<br>
+<label class='with-span' for='information-technology'>
+<input type="checkbox" name="front_category" />
+Information Technology
+<span>(55)</span>
+</label>
+<br>
+<label class='with-span' for='engineering'>
+<input type="checkbox" name="front_category" />
+Engineering
+<span>(50)</span>
+</label>
+<br>
+<label class='with-span' for='Other'>
+<input type="checkbox" name="front_category" />
+Other
+<span>(11)</span>
+</label>
+<br>
+<label class='with-span' for='professional-services'>
+<input type="checkbox" name="front_category" />
+Professional Services
+<span>(10)</span>
+</label>
+<br>
+<label class='with-span' for='management'>
+<input type="checkbox" name="front_category" />
+Management
+<span>(10)</span>
+</label>
+<br>
+<label class='with-span' for='qa----quabrty-control'>
+<input type="checkbox" name="front_category" />
+QA - Quabrty Control
+<span>(9)</span>
+</label>
+<br>
+<label class='with-span' for='accounting'>
+<input type="checkbox" name="front_category" />
+Accounting
+<span>(7)</span>
+</label>
+<br>
+<label class='with-span' for='finance'>
+<input type="checkbox" name="front_category" />
+Finance
+<span>(7)</span>
+</label>
+<br>
+<label class='with-span' for='sales'>
+<input type="checkbox" name="front_category" />
+Sales
+<span>(7)</span>
+</label>
+<br>
+<label class='with-span' for='design'>
+<input type="checkbox" name="front_category" />
+Design
+<span>(6)</span>
+</label>
+<br>
+<label class='with-span' for='general-business'>
+<input type="checkbox" name="front_category" />
+General Business
+<span>(2)</span>
+</label>
+<br>
+<label class='with-span' for='skilled-labour----trades'>
+<input type="checkbox" name="front_category" />
+Skilled Labour - Trades
+<span>(2)</span>
+</label>
+<br>
+<label class='with-span' for='supply-chain'>
+<input type="checkbox" name="front_category" />
+Supply Chain
+<span>(2)</span>
+</label>
+<br>
+<label class='with-span' for='inventory'>
+<input type="checkbox" name="front_category" />
+Inventory
+<span>(2)</span>
+</label>
+<br>
+<label class='with-span' for='manufacturing'>
+<input type="checkbox" name="front_category" />
+Manufacturing
+<span>(2)</span>
+</label>
+<br>
+<label class='with-span' for='filter_category_consultant'>
+<input type="checkbox" name="front_category" />
+Consultant
+<span>(1)</span>
+</label>
+<br>
+<label class='with-span' for='strategy----planning'>
+<input type="checkbox" name="front_category" />
+Strategy - Planning
+<span>(1)</span>
+</label>
+<br>
+<label class='with-span' for='legal'>
+<input type="checkbox" name="front_category" />
+Legal
+<span>(1)</span>
+</label>
+</br></ul>
+<br>
+
+
+
+
+
+
+
+
+
+<div class='job-filter-title'>States</div>
+<ul class='field'>
+<br>
+<input type="radio" name="filter_state" />
+<label class='with-span' for='filter_state_maharashtra'>
+Maharashtra
+<span>(84)</span>
+</label>
+<br>
+<input type="radio" name="filter_state"  />
+Chandigarh
+<span>(16)</span>
+</label>
+<br>
+<input type="radio" name="filter_state"  />
+<label class='with-span' for='filter_state_karnataka'>
+Karnataka
+<span>(5)</span>
+</label>
+<br>
+<input type="radio" name="filter_state"  />
+<label class='with-span' for='filter_state_uttar-pradesh'>
+Uttar Pradesh
+<span>(5)</span>
+</label>
+<br>
+<input type="radio" name="filter_state"  />
+<label class='with-span' for='filter_state_tamil-nadu'>
+Tamil Nadu
+<span>(3)</span>
+</label>
+<br>
+<input type="radio" name="filter_state" />
+<label class='with-span' for='filter_state_haryana'>
+Haryana
+<span>(1)</span>
+</label>
+<br>
+<input type="radio" name="filter_state" />
+<label class='with-span' for='filter_state_kerala'>
+Kerala
+<span>(1)</span>
+</label>
+<br>
+<input type="radio" name="filter_state" />
+<label class='with-span' for='filter_state_telangana'>
+Telangana
+<span>(1)</span>
+</label>
+<br><a  href="#">Reset location</a></br>
+</ul>
+</div>
+</br>
+
+
+
+
+
+
+
+
+
+
+<div class='job-filter-title'>City</div>
+<div class='job-filter-content'>
+<ul class='field'>
+<br>
+<input type="radio" name="filter_city"  />
+<label class='with-span' for='filter_city_pune'>
+Pune
+<span>(83)</span>
+</label>
+<br>
+<input type="radio" name="filter_city"  />
+<label class='with-span' for='filter_city_chandigarh'>
+Chandigarh
+<span>(16)</span>
+</label>
+<br>
+<input type="radio" name="filter_city" />
+<label class='with-span' for='filter_city_bengaluru'>
+Bengaluru
+<span>(5)</span>
+</label>
+<br>
+<input type="radio" name="filter_city"  />
+<label class='with-span' for='filter_city_noida'>
+Noida
+<span>(5)</span>
+</label>
+<br>
+<input type="radio" name="filter_city" />
+<label class='with-span' for='filter_city_chennai'>
+Chennai
+<span>(3)</span>
+</label>
+</br>
+<a  id="filter-city" href="#">Reset location</a>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="form-popup" id="myForm">
+  <form action="" class="form-container">
+
+
+    <center><p> CareerBuilder</p></center>    
+
+  <select name="Language" id="Language">
+    <option value="English">English</option>
+    <option value="Deutsch">Deutsch</option>
+    <option value="Esponal">Esponal</option>
+    <option value="Nederlands">Nederlands</option>
+  </select>
+
+<center>What type of feedback would you like to leave for us?</center><br>
+    
+    
+                      	<input type ="radio"  name="Suggestions or feedback" checked="checked" />Suggestions or feedback<br>
+
+
+
+		<label for="subject">What would you like to share with us?</label><br>
+		 <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea><br><br>
+
+
+                                	<input type ="radio"  name="Bug or site issue" />Bug or site issue<br>
+		
+                                	<input type ="radio"  name="Question" />Question<br><br>
+		
+    
+    
+    
+
+    <button type="submit" class="btn">Submit</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+
+
+<script>
+var myWindow;
+
+
+
+
+
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
